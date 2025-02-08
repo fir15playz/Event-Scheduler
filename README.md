@@ -9,3 +9,6 @@ This Event & Task Scheduler is a simple web application that helps you organize 
 - Add descriptions for additional details
 
 Perfect for anyone looking to keep track of their daily activities, meetings, deadlines, or to-do lists in a clean, organized way. The app runs entirely in your web browser and features a responsive design that works well on both desktop and mobile devices.
+
+
+## How does it work?
