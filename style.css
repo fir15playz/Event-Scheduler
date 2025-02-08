@@ -1,0 +1,99 @@
+/* Previous CSS remains the same */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.events-list {
+    margin-top: 20px;
+}
+
+.event-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border-left: 4px solid #4CAF50;
+}
+
+.event-item h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.event-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.delete-btn {
+    background-color: #ff4444;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.filter-group select {
+    flex: 1;
+}
