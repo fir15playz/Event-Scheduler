@@ -9,7 +9,7 @@
             const description = document.getElementById('description').value;
 
             if (!title || !date) {
-                alert('Please fill in at least the title and date!');
+                alert("Both Title and Date are required!");
                 return;
             }
 

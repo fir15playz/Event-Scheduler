@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event & Task Scheduler</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Event & Task Scheduler</h1>
+        
+        <div class="input-group">
+            <label for="title">Title:</label>
+            <input type="text" id="title" required>
+        </div>
+
+        <div class="input-group">
+            <label for="date">Date:</label>
+            <input type="datetime-local" id="date" required>
+        </div>
+
+        <div class="input-group">
+            <label for="type">Type:</label>
+            <select id="type">
+                <option value="event">Event</option>
+                <option value="task">Task</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="priority">Priority:</label>
+            <select id="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="description">Description:</label>
+            <textarea id="description"></textarea>
+        </div>
+
+        <div>
+        <button onclick="addEvent()">Add Event/Task</button>
+        </div>
+
+        <div>
+        <label for="typeFilter">Filter Type:<lable>
+        </div>
+        
+        <div class="filter-group">
+            <select id="typeFilter" onchange="filterEvents()">
+                <option value="all">All Types</option>
+                <option value="event">Events Only</option>
+                <option value="task">Tasks Only</option>
+            </select>
+
+            <select id="priorityFilter" onchange="filterEvents()">
+                <option value="all">All Priorities</option>
+                <option value="low">Low Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="high">High Priority</option>
+            </select>
+        </div>
+
+        <div class="events-list" id="eventsList"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
