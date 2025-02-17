@@ -1,4 +1,4 @@
-/* Previous CSS remains the same */
+/* Previous styles remain the same */
 body {
     font-family: Arial, sans-serif;
     max-width: 800px;
@@ -17,6 +17,15 @@ body {
 h1 {
     color: #E8E8E8;
     text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* New style for filter section */
+.filter-section {
+    margin-top: 40px;
+    border-top: 2px solid #eee;
+    padding-top: 20px;
 }
 
 .input-group {
@@ -32,7 +41,7 @@ label {
 input, select, textarea {
     width: 100%;
     padding: 8px;
-    border: 1px solid #222831;
+    border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -44,16 +53,17 @@ textarea {
 
 button {
     background-color: #4CAF50;
-    color: #E8E8E8;
+    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
+    transition: background-color 0.5s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #0d6a12;
 }
 
 .events-list {
@@ -61,12 +71,29 @@ button:hover {
 }
 
 .event-item {
-    background-color: #f6f6f6;
+    background-color: #f9f9f9;
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 4px;
     border-left: 4px solid #4CAF50;
+    color: #333333;
 }
+
+/* Priority colors */
+
+.event-item[data-priority="high"] {
+    border-left-color: #ff4444;
+}
+
+.event-item[data-priority="medium"] {
+    border-left-color: #ffa700;
+}
+
+.event-item[data-priority="low"] {
+    border-left-color: #4CAF50;
+}
+
+/* Event item styles */
 
 .event-item h3 {
     margin: 0 0 10px 0;
@@ -96,4 +123,110 @@ button:hover {
 
 .filter-group select {
     flex: 1;
+}
+
+/* Notification section */
+
+.notification-group {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #1A1A1A;
+    border-radius: 4px;
+}
+
+.notification-group label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.notification-group input[type="email"] {
+    margin-bottom: 10px;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 4px;
+    color: white;
+    z-index: 1000;
+    animation: slideIn 0.5s ease-out;
+}
+
+.notification.success {
+    background-color: #4CAF50;
+}
+
+.notification.error {
+    background-color: #ff4444;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.error-message {
+    color: #ff4444;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+/* Improve focus visibility */
+*:focus {
+    outline: 3px solid #4CAF50;
+    outline-offset: 2px;
+}
+
+/* Skip navigation for keyboard users */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000000;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Ensure interactive elements have sufficient size */
+button, 
+select, 
+input {
+    min-height: 44px; /* Minimum touch target size */
+    min-width: 44px;
+}
+
+/* High contrast mode support */
+@media (forced-colors: active) {
+    .event-item {
+        border: 2px solid currentColor;
+    }
+    
+    button {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Reduce motion if user prefers */
+@media (prefers-reduced-motion: reduce) {
+    .notification {
+        animation: none;
+    }
+    
+    * {
+        transition: none !important;
+    }
 }
